@@ -70,9 +70,9 @@ Byte_Gen(\%Bad_Bytes);
 =head1 SYNOPSIS
  
  Byte_Me.pl [-b HEX] [-f FORMAT] [-o FILE]
- -b HEX         Known bad bytes in '\x00' form. Multiple can be used (ex. '\x00\x01')
+ -b HEX         Known bad bytes in \x00 form. Multiple can be used (ex. \x00\x01)
  -o FILE        Output bytes to FILE
- -f FORMAT      Output format; RAW (only useful with -o) or DEFAULT ( '\x00\x01' Format)
+ -f FORMAT      Output format; RAW (only useful with -o) or DEFAULT ( \x00\x01 Format)
  --version,-v   Print Version information
  --help,-h      Print this help
 
