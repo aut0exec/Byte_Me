@@ -43,5 +43,28 @@ The '-f RAW' argument is only useful with the '-o' argument but the program will
 ```
 ./Byte_Me.pl -b \x00\x01\xde\xad\xbe\xef -o bytes.txt
 ```
+
+In the event that a byte array needs to start or stop at a specific number, the '-s' and/or the '-e' arguments can be used to specify the start and/or end respectively.
+
+- Generate bytes from \x20 to \xff excluding bytes \x00\x01\xde\xad\xbe\xef
+
+```
+./Byte_Me.pl -s \x20 -b \x00\x01\xde\xad\xbe\xef -o bytes.txt
+```
+
+- Generate bytes from \x00 to \xcd excluding bytes \x00\x01\xde\xad\xbe\xef
+
+```
+./Byte_Me.pl -e \xcd -b \x00\x01\xde\xad\xbe\xef -o bytes.txt
+```
+
+- Generate bytes from \x11 to \xcd excluding bytes \x00\x01\xde\xad\xbe\xef and write RAW bytes to file
+
+```
+./Byte_Me.pl -s \x11 -e \xcd -b \x00\x01\xde\xad\xbe\xef -f RAW -o raw_bytes.bin
+```
+
 ## Future additions
 Nothing currently but if you come up with a request, let me know and I'll try to implement it.
+
+	* July 2023 - Request for specifying start/stop values rather than assuming all 256 bytes.
